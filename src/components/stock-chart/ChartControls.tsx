@@ -32,10 +32,10 @@ export const ChartControls: FC<ChartControlsProps> = ({
           {formatter.format(date)}
         </div>
         <button className="button" onClick={() => changeInterval(date - dayTicks)}>
-          Н
+          Z
         </button>
         <button className="button" onClick={() => changeInterval(date + dayTicks)}>
-          В
+          V
         </button>
       </div>
       <ButtonGroup defaultValue="candlestick" onChange={(e) => changeType(e)}>

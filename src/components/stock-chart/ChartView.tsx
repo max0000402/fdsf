@@ -60,21 +60,43 @@ export const ChartView: FC<ChartViewProps> = ({ shortName, minDate, type }) => {
     ]
   }, [data])
 
-  const options: ApexOptions = {
-    chart: {
-      id: 'basic-bar',
-    },
-    xaxis: {
-      type: 'datetime',
-    },
-  }
+  const options = useMemo(() => {
+    if (type === 'candlestick') {
+      return {
+        chart: {
+          id: 'candlestick',
+        },
+        xaxis: {
+          type: 'datetime',
+        },
+      }
+    }
+
+    return {
+      chart: {
+        id: 'line',
+      },
+      xaxis: {
+        type: 'datetime',
+      },
+    }
+  }, [type])
+
+  // const options: ApexOptions = {
+  //   chart: {
+  //     id: 'basic-bar',
+  //   },
+  //   xaxis: {
+  //     type: 'datetime',
+  //   },
+  // }
 
   return (
     <div className="h-full">
       <Chart
         options={options}
         series={type === 'candlestick' ? series : lineSeries}
-        type="candlestick"
+        type={type === 'candlestick' ? 'candlestick' : 'line'}
         height="100%"
       />
     </div>
