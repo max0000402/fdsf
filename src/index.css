@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+
+  --accent-green: #90ba1a;
+  --accent-red: #ff0707;
+  --accent-gray: #363636;
+
+  --bg-1: #f8f8f8;
+  --bg-2: #ffffff;
+
+  --text-primary: #000000;
+  --text-secondary: #acacac;
+
+  --button-color: #565656;
+  --hover: #e4e5f6;
+  --press: #bbbccb;
+  --selected: #363636;
+
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 16px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 16px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+h1,
+h2,
+h3 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+.text-accent {
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: 0.75rem;
+}
+
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: var(--bg-1);
+  color: var(--text-primary);
+}
+
+button.active,
+.button.active {
+  background-color: var(--button-color);
+  color: var(--bg-1);
+}
+
+.button-group {
+  background-color: var(--bg-1);
+  display: flex;
+  padding: 8px 12px;
+  gap: 1.5rem;
+  border-radius: 12px;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 64px;
+}

@@ -1,0 +1,5 @@
+.read-the-docs {
+  color: #888;
+  @apply text-2xl;
+  @apply text-green-500;
+}

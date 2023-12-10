@@ -1,0 +1,16 @@
+.stock {
+    img {
+        @apply w-[72px];
+    }
+    h1 {
+        @apply text-3xl;
+    }
+
+    h2 {
+        @apply text-2xl font-bold text-neutral-400;
+    }
+
+    span {
+        @apply text-2xl;
+    }
+}

@@ -1,0 +1,11 @@
+.buttonGroupItem {
+  svg {
+    stroke: black;
+  }
+}
+
+.selected {
+  svg {
+    stroke: white;
+  }
+}
