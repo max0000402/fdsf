@@ -33,7 +33,7 @@ export const ChartView: FC<ChartViewProps> = ({ shortName, minDate, type }) => {
         name: 'Series 1',
         data: data.map((el) => [
           new Date(`${el.tradedate} ${el.tradetime}`).getTime(),
-          [el.pr_open, el.pr_close, el.pr_high, el.pr_low],
+          [el.pr_open, el.pr_high, el.pr_low, el.pr_close],
         ]),
       },
     ]
